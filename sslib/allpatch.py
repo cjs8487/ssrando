@@ -271,3 +271,32 @@ class AllPatcher:
             if modified:
                 write_bytes_create_dirs(modified_eventpath, eventarc.to_buffer())
                 # print(f'patched {filename}')
+        print('patching credits')
+        credits_root = (
+            self.actual_extract_path / "DATA" / "files" / "US" / "Layout" / "EndRoll.arc"
+        )
+        credits_modified_root = (
+            self.modified_extract_path / "DATA" / "files" / "US" / "Layout" / "EndRoll.arc"
+        )
+        credits_arc = U8File.parse_u8(BytesIO((credits_root).read_bytes()))
+        for arc_file_path in sorted(
+                credits_arc.get_all_paths(), key=lambda x: x[-1], reverse=True
+            ):
+            print(arc_file_path)
+            filename = arc_file_path.split("/")[-1]
+            if (filename == "en_US_endScroll_00.msbt"):
+                print('patching credits msbt')
+                # print(credits_arc.get_file_data(arc_file_path))
+                parsedMsb = parseMSB(credits_arc.get_file_data(arc_file_path))
+                # print(parsedMsb)
+                if self.event_text_patch:
+                    patchedMsb = self.event_text_patch(
+                        parsedMsb, filename[:-5]
+                    )
+                    if patchedMsb:
+                        credits_arc.set_file_data(arc_file_path, buildMSB(patchedMsb))
+                        modified = True
+                else:
+                    modifed = False
+        if modified:
+            write_bytes_create_dirs(credits_modified_root, credits_arc.to_buffer())
