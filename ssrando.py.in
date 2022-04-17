@@ -77,11 +77,12 @@ class Randomizer(BaseRandomizer):
             self.seed = random.randint(0, 1000000)
         self.options.set_option("seed", self.seed)
 
-        print(f"Seed: {self.seed}")
-        self.rng = random.Random(self.seed)
+        self.randomizer_hash = self._get_rando_hash()
+        self.rng = random.Random()
         if self.no_logs:
-            for _ in range(100):
-                self.rng.random()
+            self.rng.seed(self.seed+(${SECRET_KEY}))
+        else:
+            self.rng.seed(self.seed)
         self.rando = Rando(self.areas, self.options, self.rng)
         self.excluded_locations = self.options["excluded-locations"]
         self.dry_run = bool(self.options["dry-run"])

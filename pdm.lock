@@ -232,6 +232,11 @@ requires_python = "<3.12,>=3.7"
 summary = "Python/C++ bindings helper module"
 
 [[package]]
+name = "tinyaes"
+version = "1.0.4"
+summary = "tiny-AES-c wrapper in Cython"
+
+[[package]]
 name = "toml"
 version = "0.10.2"
 requires_python = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
@@ -251,7 +256,7 @@ summary = "Backported and Experimental Type Hints for Python 3.7+"
 
 [metadata]
 lock_version = "4.1"
-content_hash = "sha256:e092b75a5d11b63d0fd4bd965a7a04cb946b6578925851a0ca66ad77aef99f08"
+content_hash = "sha256:62b2d3e16c9723871f253048cd65e697cf4c5b1f5c576274b95ef04ba62c5896"
 
 [metadata.files]
 "altgraph 0.17.3" = [
@@ -490,6 +495,29 @@ content_hash = "sha256:e092b75a5d11b63d0fd4bd965a7a04cb946b6578925851a0ca66ad77a
     {url = "https://files.pythonhosted.org/packages/c5/bb/c517455712ce36556381efca7292d8cdbedbe57710cdbe4c3fb315cd6947/shiboken6-6.4.3-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:4a63978b1a4ffed32776413a213a0f4e0a7fde2ebe06ac2ac70f99103fed185b"},
     {url = "https://files.pythonhosted.org/packages/d1/79/d7c785476a84b058841f947071bbcb97cc61e1bd33f8d7149e004c75b51d/shiboken6-6.4.3-cp37-abi3-win_amd64.whl", hash = "sha256:0fee602ba02a0d1a6e4d4a69ddc5375ec7bed2ac5b51f06266a919d896517ee5"},
     {url = "https://files.pythonhosted.org/packages/f9/52/4461d3d5cabfaeb56562d72a4b1013ecf1fd7be2ef7bebdc7649d56ab1b8/shiboken6-6.4.3-cp37-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:74570273004d2e481e55618150dfaee7ae253027b438066e216b339fae1e999a"},
+]
+"tinyaes 1.0.4" = [
+    {url = "https://files.pythonhosted.org/packages/0e/d2/7602026c2d6d4a9b2b581245aab8734a2e0f048fab54b1aeeb93d09cca91/tinyaes-1.0.4-cp310-cp310-win32.whl", hash = "sha256:56d7d35241fdc44174703a7993e9c8660f9a748654e4f182646a81281d344959"},
+    {url = "https://files.pythonhosted.org/packages/28/89/36635f4ff8370008676ae76c38000bb5d45fb01118ed8cd5387fd998aee9/tinyaes-1.0.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:830acaced065e249e3beb4043aeb44f1301b4e1f2d5153049a63a8695b294d1e"},
+    {url = "https://files.pythonhosted.org/packages/39/36/dd5afab4e7a771a23351994137445b600ffba2ebc904b6ae206524ff66af/tinyaes-1.0.4-cp38-cp38-win_amd64.whl", hash = "sha256:aebd534b9294d5de5a7f916810b93ed00cfa2d091051ddad1d5d813f1ef91954"},
+    {url = "https://files.pythonhosted.org/packages/3c/c8/f26bdde6c302ef4cb2cc4600316eb5c5a9c864565c0215f57a4780f82569/tinyaes-1.0.4-cp311-cp311-win32.whl", hash = "sha256:dfba3946aa4e7155be953e3a2c1c9882c64ad4632b13966bbdb32b85e6d2d6d6"},
+    {url = "https://files.pythonhosted.org/packages/45/06/ab5787d1073bbc433a3f1242e5a08fe72664185145258d0f9c03101b2b4b/tinyaes-1.0.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:201dc6d8aea4a65ac88a8ab09dbe0a8151396c4ef73a1a1337e8c2e155a30679"},
+    {url = "https://files.pythonhosted.org/packages/4b/d9/a90bdd48a5c7ab33e300d636b3d2767f41dc461144cbbda1270386db089e/tinyaes-1.0.4-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d470c186c0d28862ad74cbbb21d1ee612e2aa26760e7c7dd5c4a19f74641a11d"},
+    {url = "https://files.pythonhosted.org/packages/68/29/bcbd4a5990d62dfe0b108424cd15ab7dace50e6541c8ee31ed37f8831209/tinyaes-1.0.4-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:366746fd7f114d213bde39ebba60bc123f827c955fb95363a1c5c78fbbfaec21"},
+    {url = "https://files.pythonhosted.org/packages/6d/d6/d0211465ede271367bad7901a4d12fd6d9a0f628d62ee362cf0966a8e69b/tinyaes-1.0.4-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b1e9700838d89a694b89efa41151ca863962cac79b536771bde6fbf795293fee"},
+    {url = "https://files.pythonhosted.org/packages/72/91/3d3ed761485a7dbbdf86fb56494fb99517f6294d5dbacdfd46d431a9b6f6/tinyaes-1.0.4-cp37-cp37m-win32.whl", hash = "sha256:654af1dd0bbc57fbd3bbcd3abf1f1a50c25290c89bddf2cecd0128bd7e8099c8"},
+    {url = "https://files.pythonhosted.org/packages/8b/3c/18d48c57bbbe87622f7a1dfae21df1d203f7f184f4fd97da70eb01b701f9/tinyaes-1.0.4-cp38-cp38-win32.whl", hash = "sha256:1f3763caf49086fa82310d3270f718d7d143dcb72274b0b771212b828249d6ef"},
+    {url = "https://files.pythonhosted.org/packages/8f/d8/a8db686f9a2d13600428853a154eaa9a06b0146d84d28e7c51d5715afa7b/tinyaes-1.0.4-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:92c44cc8247467dde7d785675d590c692ae1d4f127cdd5c9f1b681e33e1fc26e"},
+    {url = "https://files.pythonhosted.org/packages/9e/8b/8f94a911bb8482551ef0664578b5c76a7e615f7a793129105f769261c741/tinyaes-1.0.4.tar.gz", hash = "sha256:236fc2a1182d425755c1a050cbf571862ee91ad7670eb174e960f35b815c6bcd"},
+    {url = "https://files.pythonhosted.org/packages/a0/67/432026be0ae1761e486da4ef8048d552f79d892085b9a9ee7b2201dc3181/tinyaes-1.0.4-cp37-cp37m-win_amd64.whl", hash = "sha256:e675e7ef0876c8d0d0e5a3542e318f433def2949a0be4f161113d38ca592261a"},
+    {url = "https://files.pythonhosted.org/packages/a1/0e/5aa78a3b02d3f15daccf2b25e0e397eff87a0de5adb0180cbd8c6c3c02b2/tinyaes-1.0.4-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:cac3070af2a3101c669fbb11cf5323f1d1a4002a6d93ef946e6f4a8d69c3f84d"},
+    {url = "https://files.pythonhosted.org/packages/be/ee/c090e05a9050cd515a1da76e997a04198cfe384d444aff48f748ea0cc3da/tinyaes-1.0.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7e8ffb828cafb87f3cbc0c0267998165421d83f8951d2eb83a38c930d193377d"},
+    {url = "https://files.pythonhosted.org/packages/c2/a3/9105b69e0810f3f31324a131c531ae8b59b0e8fe0c14b910c172463af880/tinyaes-1.0.4-cp39-cp39-win_amd64.whl", hash = "sha256:2419501d23d2154ace9b78c5bb55df8b2d6cbdb477968c665d477d16459e7017"},
+    {url = "https://files.pythonhosted.org/packages/c5/84/9e91360168189488e7386aa5a46d5f8e0a7f6791d89ade9318ce5b21fcc2/tinyaes-1.0.4-cp39-cp39-win32.whl", hash = "sha256:b8c836578b1fae1f3be4fd0481bc8f74f0ca0a264345f9cbae560b461cd84dd8"},
+    {url = "https://files.pythonhosted.org/packages/dd/24/f0a0c8e26342e30efafc74844823e020dfbfe1ce0c20403506f35c90b5b0/tinyaes-1.0.4-cp310-cp310-win_amd64.whl", hash = "sha256:ead57efc443808ac9169da27206ac42c43c6ef4a88f35cbf16f0b2deb4fd6914"},
+    {url = "https://files.pythonhosted.org/packages/df/c0/1a897db86a921e88782bbb20ce9568bc52615093f595a98187cb7becf87e/tinyaes-1.0.4-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2d3e747d594f12649e1780c067ff91c1ec1f76475f99c902ac2fdf1b3f406750"},
+    {url = "https://files.pythonhosted.org/packages/e7/0f/d1cccb965126c3f7d55f2cb2af6793fac5274069720e57dcb0106a4c7f13/tinyaes-1.0.4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:31afd74faf308226b442050f58812ca113fb172960420e4ad8faef324d63cccc"},
+    {url = "https://files.pythonhosted.org/packages/f3/29/85da9e0df09ad2aa4f8df3a207001554521994f8d0151eb562536a65448a/tinyaes-1.0.4-cp311-cp311-win_amd64.whl", hash = "sha256:64484915c80eeed7408801d3dee759f81b9fb2ff1cc68bf8544b19b8764d6b77"},
 ]
 "toml 0.10.2" = [
     {url = "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
