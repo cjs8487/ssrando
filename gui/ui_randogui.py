@@ -1794,6 +1794,7 @@ class Ui_MainWindow(object):
         self.label_include_locations.setText(QCoreApplication.translate("MainWindow", u"Included Locations", None))
         self.included_free_search.setText("")
         self.included_free_search.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.include_category_filters.setPlaceholderText("")
         self.include_location.setText(QCoreApplication.translate("MainWindow", u"Include\n"
 "<--", None))
         self.exclude_location.setText(QCoreApplication.translate("MainWindow", u"Exclude\n"

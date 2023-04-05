@@ -1377,7 +1377,11 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="include_category_filters"/>
+                   <widget class="QComboBox" name="include_category_filters">
+                    <property name="placeholderText">
+                     <string/>
+                    </property>
+                   </widget>
                   </item>
                  </layout>
                 </item>
