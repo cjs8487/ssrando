@@ -497,7 +497,7 @@
   - name: Fi Call Text
     type: textadd
     unk1: 2 # Fi text box background
-    text: "You called for me, Master?\n[1]Required Dungeons[2]Information[3]Current Status[4-]Never mind."
+    text: "You called for me, master?\n[1]Required Dungeons[2]Information & Warp[3]Current Status[4-]Never mind."
   - name: Display Fi Call Text
     type: flowadd
     flow:
@@ -513,7 +513,7 @@
       param3: 0
     cases:
       - Display Fi Pre Required Dungeon Text
-      - Display Fi Info Text
+      - Display Fi Info & Warp Text
       - Display Fi Status Text
       - -1 #returns
 #flows for required dungeon option
@@ -536,18 +536,18 @@
       param3: 68
       param4: Fi Required Dungeon Text
 #flows for info option
-  - name: Fi Info Text
+  - name: Fi Info & Warp Text
     type: textadd
     unk1: 2 # Fi text box background
-    text: "Yes, Master. What information do\nyou seek?\n[1]Hints[2]Play Time[3-]Never mind."
-  - name: Display Fi Info Text
+    text: "Yes, Master. What information do\nyou seek?\n[1]Hints[2]Fi Warp[3]Play Time[4-]Never mind."
+  - name: Display Fi Info & Warp Text
     type: flowadd
     flow:
       type: type1
-      next: Fi Info Switch
+      next: Fi Info & Warp Text Switch
       param3: 68
       param4: Fi Info Text
-  - name: Fi Info Switch
+  - name: Fi Info & Warp Text Switch
     type: switchadd
     flow:
       subType: 6
@@ -555,8 +555,16 @@
       param3: 0
     cases:
       - Fi Hints Command Call
+      - Fi Warp
       - 1 #play time
       - Display Fi Call Text #returns
+# Flows for Fi Warp
+  - name: Fi Warp
+    type: flowadd
+    flow: 
+      type: type3
+      next: -1
+      param3: 73 #custom command 73
   - name: Fi Hints Command Call
     type: flowadd
     flow: 

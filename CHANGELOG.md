@@ -42,6 +42,15 @@
   - It is now possible to start with the Standard, Light, or Pro interface without having to change the setting from the inventory screen
 - Added an accessibility toggle for light and dark themes (by CovenEsme)
   - You can now pick to have a light theme, dark theme, or to automatically change based on the theme of your computer
+- Added option to start at a random location (by CovenEsme)
+  - Has 4 main options: Vanilla, Bird Statues, Any Surface Region, Any
+    - Vanilla: You will spawn in Link's bedroom
+    - Bird Statues: You will spawn at a random Bird Statue or Link's bedroom
+    - Any Surface Region: You will spawn at an entrance on a surface region (Faron, Eldin, Lanayru) or Link's bedroom
+    - Any: You will spawn at any entrance
+  - Fi now has an option to let you return to this starting point! She'll warp you back whenever you like :p
+  - Added an additional option that limits the possible starting locations
+    - When enabled, you will only start at a location in a region unlocked by the tablets you start with
 - Added option to get all extra dowsing abilities after obtaining Whitesword
 - Added option to remove enemy battle music
 - Split hero mode options to make each effect customizable

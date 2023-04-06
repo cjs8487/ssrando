@@ -201,6 +201,23 @@ li r4, 1 ; quarter heart, enough to survive
 blr
 
 
+.global send_to_start
+send_to_start:
+lwz r3, RELOADER_PTR@sda21(r13)
+lis r4, 0x802DA0E0@ha ; this is where the start entrance info is patched
+la r4, 0x802DA0E0@l(r4)
+lbz r5, 8(r4)
+lbz r6, 9(r4)
+lbz r7, 0xA(r4)
+lbz r8, 0xB(r4)
+li r9, 2
+li r10, 0
+li r0, 0xF
+stw r0, 0x8(r1)
+li r0, -1
+stw r0, 0xC(r1)
+b Reloader__triggerEntrance
+
 ; space to declare all the functions defined in the
 ; custom-functions rust project
 .global process_startflags
@@ -645,5 +662,34 @@ li r4, 1
 bl setStoryflagToValue
 
 b 0x950
+
+.close
+
+
+.open "d_a_obj_time_boatNP.rel"
+.org @NextFreeSpace
+
+.global fix_sadship_boat
+fix_sadship_boat:
+stwu r1, -0x10(r1)
+mflr r0
+stw r0, 0x14(r1)
+
+lis r3, 0x8057
+ori r3, r3, 0xd4e8
+bl isCurrentStage
+cmpwi r3, 0
+beq not_ancient_harbour
+bl AcOTimeBoat__checkActivatedStoryflag
+b return_boat_state
+
+not_ancient_harbour:
+li r3, 1
+
+return_boat_state:
+lwz r0, 0x14(r1)
+mtlr r0
+addi r1, r1, 0x10
+blr
 
 .close
