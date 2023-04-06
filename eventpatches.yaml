@@ -546,7 +546,7 @@
       type: type1
       next: Fi Info & Warp Text Switch
       param3: 68
-      param4: Fi Info Text
+      param4: Fi Info & Warp Text
   - name: Fi Info & Warp Text Switch
     type: switchadd
     flow:
