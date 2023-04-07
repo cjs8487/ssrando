@@ -29,8 +29,6 @@ jobs:
         run: cat ssrando.py.in | envsubst > ssrando.py
       # - name: Test if the formatting is correct
       #   run: black . --check
-      - name: Run tests
-        run: python3 -mpytest test/test_placement_file.py
       - name: Build distribution
         run: python3 -mPyInstaller ssrando.spec
       - name: Run tests
